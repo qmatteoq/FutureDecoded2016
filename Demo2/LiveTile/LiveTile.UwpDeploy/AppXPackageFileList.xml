@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MyProjectOutputPath>$(PackageLayout)\..\..\LiveTile.App\bin</MyProjectOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <LayoutFile Include="$(MyProjectOutputPath)\DesktopUwp\LiveTile.App.exe">
+      <PackagePath>$(PackageLayout)\LiveTile.App.exe</PackagePath>
+    </LayoutFile>
+    <LayoutFile Include="$(MyProjectOutputPath)\DesktopUwp\DesktopBridge.Helpers.dll">
+      <PackagePath>$(PackageLayout)\DesktopBridge.Helpers.dll</PackagePath>
+    </LayoutFile>
+  </ItemGroup>
+</Project>
