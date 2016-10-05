@@ -29,7 +29,7 @@ namespace Migrate.Uwp.WinForms
                     string responseMessage = response.Message["response"].ToString();
                     if (responseMessage == "success")
                     {
-                        this.Close();
+                        this.Hide();
                     }
                 }
             }

@@ -40,11 +40,13 @@ namespace Migrate.UWP
 
         private async void Connection_RequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
         {
+            var deferral = args.GetDeferral();
             string name = args.Request.Message["name"].ToString();
             Result.Text = $"Hello {name}";
             ValueSet valueSet = new ValueSet();
             valueSet.Add("response", "success");
             await args.Request.SendResponseAsync(valueSet);
+            deferral.Complete();
         }
 
         private async void OnOpenForm(object sender, RoutedEventArgs e)
